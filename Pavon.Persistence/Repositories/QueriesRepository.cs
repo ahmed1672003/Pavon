@@ -2,6 +2,8 @@
 
 using Microsoft.EntityFrameworkCore.Query;
 
+using Pavon.Domain.Abstractions.Repositories;
+
 namespace Pavon.Persistence.Repositories;
 public sealed class QueriesRepository<TEntity>(IPavonDbContext context) : IQueriesRepository<TEntity> where TEntity : class
 {

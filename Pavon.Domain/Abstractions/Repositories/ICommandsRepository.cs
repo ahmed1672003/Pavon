@@ -1,6 +1,6 @@
 ﻿using System.Linq.Expressions;
 
-namespace Pavon.Application.Interfaces.Repositories;
+namespace Pavon.Domain.Abstractions.Repositories;
 public interface ICommandsRepository<TEntity> where TEntity : class
 {
     Task AddAsync(TEntity entity, CancellationToken cancellation = default);

@@ -13,8 +13,19 @@ builder.Services.AddSwaggerGen(c =>
     c.SwaggerDoc("v1",
         new OpenApiInfo { Title = "gRPC transcoding", Version = "v1" });
 });
+
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("Pavon", policy =>
+    {
+        policy.AllowAnyHeader().AllowAnyOrigin().AllowAnyMethod();
+    });
+});
 var app = builder.Build();
 
+
+app.UseCors("Pavon");
 app.UseSwagger();
 app.UseSwaggerUI(c =>
 {
@@ -22,9 +33,8 @@ app.UseSwaggerUI(c =>
 });
 
 // Configure the HTTP request pipeline.
-app
-    .MapGrpcService<CategoriesService>()
-    .WithOrder(1)
-    .WithTags("categories");
+app.MapGrpcService<CategoriesService>();
+
+app.UseRouting();
 
 app.Run();

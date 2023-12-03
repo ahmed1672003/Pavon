@@ -1,4 +1,6 @@
-﻿namespace Pavon.Persistence;
+﻿using Pavon.Domain.Abstractions.Repositories;
+
+namespace Pavon.Persistence;
 public static class Registeration
 {
     public static async Task<IServiceCollection> RegisterPersistence(this IServiceCollection services, IConfiguration config)

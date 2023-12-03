@@ -1,6 +1,6 @@
 ﻿using System.Linq.Expressions;
 
-using Pavon.Application.Interfaces.Repositories;
+using Pavon.Domain.Abstractions.Repositories;
 
 namespace Pavon.Persistence.Repositories;
 public sealed class CommandsRepository<TEntity>(IPavonDbContext context) : ICommandsRepository<TEntity> where TEntity : class

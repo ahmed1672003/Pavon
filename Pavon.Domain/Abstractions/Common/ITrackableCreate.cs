@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Pavon.Domain.Common.Abstracts;
+namespace Pavon.Domain.Abstractions.Common;
 public interface ITrackableCreate
 {
     [Required]
