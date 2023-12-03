@@ -2,7 +2,7 @@
 
 using Microsoft.EntityFrameworkCore.Query;
 namespace Pavon.Application.Interfaces.Repositories;
-public interface IQueriesRepository<TEntity>
+public interface IQueriesRepository<TEntity> where TEntity : class
 {
     Task<IQueryable<TEntity>> GetAllAsync(
         Expression<Func<TEntity, bool>>? predicate = null,

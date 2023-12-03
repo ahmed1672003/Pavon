@@ -1,0 +1,15 @@
+syntax = "proto3";
+import "google/protobuf/empty.proto";
+option csharp_namespace = "Pavon.Grpc";
+
+package categoryservice;
+
+service Categories  {
+	rpc GetAllCategoriesAsync(google.protobuf.Empty) returns (GetCategoriesResponse);
+}
+message CategoryDto {
+	string name = 1;
+}
+message GetCategoriesResponse  {
+	repeated CategoryDto categories = 1;
+}
