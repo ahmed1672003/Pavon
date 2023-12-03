@@ -2,5 +2,5 @@
 public class BaseEntityNotFoundException : Exception
 {
     public BaseEntityNotFoundException(string? messsage = "Entity Not Found Exception") : base(messsage) { }
-    public BaseEntityNotFoundException(string? messsage = "Entity Not Found Exception", Exception? innerException) : base(messsage, innerException) { }
+    public BaseEntityNotFoundException(string? messsage = "Entity Not Found Exception", Exception? innerException = null) : base(messsage, innerException) { }
 }

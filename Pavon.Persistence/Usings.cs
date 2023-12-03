@@ -17,4 +17,7 @@ global using Pavon.Domain.Entities.Identity;
 global using Pavon.Persistence.Context;
 global using Pavon.Persistence.Repositories.Commands;
 global using Pavon.Persistence.Repositories.Queries;
+global using Pavon.Persistence.UnitOfWorks;
+global using Pavon.Persistence.UnitOfWorks.Commands;
+global using Pavon.Persistence.UnitOfWorks.Queries;
 namespace Pavon.Persistence;

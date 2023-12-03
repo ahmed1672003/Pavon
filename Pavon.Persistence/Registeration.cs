@@ -10,8 +10,12 @@ public static class Registeration
 
         services
             .AddScoped(typeof(ICommandsRepository<>), typeof(CommandsRepository<>))
-            .AddScoped(typeof(IQueriesRepository<>), typeof(QueriesRepository<>));
-
+            .AddScoped(typeof(IQueriesRepository<>), typeof(QueriesRepository<>))
+            .AddScoped<IUnitOfWork, UnitOfWork>()
+            .AddScoped<IUnitOfQueriesWork, UnitOfQueriesWork>()
+            .AddScoped<IUnitOfCommandsWork, UnitOfCommandsWork>()
+            .AddScoped<ICategoryCommandsRepository, CategoryCommandsRepository>()
+            .AddScoped<ICategoryQueriesRepository, CategoryQueriesRepository>();
         return services;
     }
 }
