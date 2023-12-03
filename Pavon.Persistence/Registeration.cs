@@ -1,4 +1,4 @@
-﻿using Pavon.Domain.Abstractions.Repositories;
+﻿
 
 namespace Pavon.Persistence;
 public static class Registeration

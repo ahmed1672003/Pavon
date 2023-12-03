@@ -7,8 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-    <Folder Include="Protos\" />
+    <Folder Include="Controllers\V1\" />
+    <Folder Include="Protos\V1\" />
   </ItemGroup>
 
 </Project>

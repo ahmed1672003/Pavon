@@ -1,9 +1,5 @@
-﻿using System.Linq.Expressions;
-
-using Pavon.Domain.Abstractions.Repositories;
-
-namespace Pavon.Persistence.Repositories;
-public sealed class CommandsRepository<TEntity>(IPavonDbContext context) : ICommandsRepository<TEntity> where TEntity : class
+﻿namespace Pavon.Persistence.Repositories.Commands;
+public class CommandsRepository<TEntity>(IPavonDbContext context) : ICommandsRepository<TEntity> where TEntity : class
 {
     private readonly DbSet<TEntity> _entities = context.Set<TEntity>();
     public async Task AddAsync(TEntity entity, CancellationToken cancellation = default) => await _entities.SingleInsertAsync(entity, cancellation);

@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Pavon.Application\Pavon.Application.csproj" />
+    <ProjectReference Include="..\Pavon.Domain\Pavon.Domain.csproj" />
   </ItemGroup>
 
 </Project>

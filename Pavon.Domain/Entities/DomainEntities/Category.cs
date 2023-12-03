@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Pavon.Domain.Abstractions.Common;
-using Pavon.Domain.Bases;
+using Pavon.Domain.Bases.Entities;
 
 namespace Pavon.Domain.Entities.DomainEntities;
 public sealed class Category : BaseEntity, ITrackableCreate, ITrackableUpdate, ITrackableDelete, ISoftDeleteable

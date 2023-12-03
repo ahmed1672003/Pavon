@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Pavon.Domain.Bases;
+namespace Pavon.Domain.Bases.Entities;
 public class BaseEntity
 {
     [Length(64, 64)]

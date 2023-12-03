@@ -1,11 +1,5 @@
-﻿using System.Linq.Expressions;
-
-using Microsoft.EntityFrameworkCore.Query;
-
-using Pavon.Domain.Abstractions.Repositories;
-
-namespace Pavon.Persistence.Repositories;
-public sealed class QueriesRepository<TEntity>(IPavonDbContext context) : IQueriesRepository<TEntity> where TEntity : class
+﻿namespace Pavon.Persistence.Repositories.Queries;
+public class QueriesRepository<TEntity>(IPavonDbContext context) : IQueriesRepository<TEntity> where TEntity : class
 {
     private readonly DbSet<TEntity> _entities = context.Set<TEntity>();
     public Task<IQueryable<TEntity>> GetAllAsync(

@@ -1,9 +1,7 @@
-﻿using Pavon.Domain.Abstractions.Repositories;
-
-namespace Pavon.Domain.Abstractions.UnitOfWorks;
+﻿namespace Pavon.Domain.Abstractions.UnitOfWorks;
 public interface IUnitOfWork : IAsyncDisposable
 {
-    IQueriesRepository<TEntity> GetQueriesRepository<TEntity>() where TEntity : class;
-    ICommandsRepository<TEntity> GetCommandsRepository<TEntity>() where TEntity : class;
+    IUnitOfCommandsWork Commands { get; }
+    IUnitOfQueriesWork Queries { get; }
     Task<int> SaveChangesAsync(CancellationToken cancellation = default);
 }

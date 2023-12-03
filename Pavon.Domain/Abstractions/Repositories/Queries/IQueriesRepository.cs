@@ -1,7 +1,4 @@
-﻿using System.Linq.Expressions;
-
-using Microsoft.EntityFrameworkCore.Query;
-namespace Pavon.Domain.Abstractions.Repositories;
+﻿namespace Pavon.Domain.Abstractions.Repositories.Queries;
 public interface IQueriesRepository<TEntity> where TEntity : class
 {
     Task<IQueryable<TEntity>> GetAllAsync(
