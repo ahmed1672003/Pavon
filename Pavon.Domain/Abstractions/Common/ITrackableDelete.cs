@@ -1,5 +1,7 @@
 ﻿namespace Pavon.Domain.Abstractions.Common;
 public interface ITrackableDelete
 {
-    public DateTime? DeletedAt { get; set; }
+    public DateTime? DeletedAtUtc { get; set; }
+
+    Task DeleteAsync() => Task.Run(() => DeletedAtUtc = DateTime.UtcNow);
 }

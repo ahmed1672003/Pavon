@@ -1,12 +1,15 @@
 ﻿global using System.Linq.Expressions;
+global using System.Reflection;
 
 global using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 global using Microsoft.EntityFrameworkCore;
+global using Microsoft.EntityFrameworkCore.Diagnostics;
 global using Microsoft.EntityFrameworkCore.Query;
 global using Microsoft.Extensions.Configuration;
 global using Microsoft.Extensions.DependencyInjection;
 
 global using Pavon.Application.Interfaces.Context;
+global using Pavon.Domain.Abstractions.Common;
 global using Pavon.Domain.Abstractions.Repositories.Commands;
 global using Pavon.Domain.Abstractions.Repositories.Queries;
 global using Pavon.Domain.Abstractions.UnitOfWorks;

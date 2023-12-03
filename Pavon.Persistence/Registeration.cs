@@ -1,12 +1,13 @@
-﻿
-
-namespace Pavon.Persistence;
+﻿namespace Pavon.Persistence;
 public static class Registeration
 {
     public static async Task<IServiceCollection> RegisterPersistence(this IServiceCollection services, IConfiguration config)
     {
         services.AddDbContext<IPavonDbContext, PavonDbContext>(options =>
-                options.UseSqlServer(config.GetConnectionString("PavonDatabaseConnection")), ServiceLifetime.Scoped);
+        {
+            options.UseSqlServer(config.GetConnectionString("PavonDatabaseConnection"));
+            options.AddInterceptors(new Interceptors.SaveChangesInterceptor());
+        }, ServiceLifetime.Scoped);
 
         services
             .AddScoped(typeof(ICommandsRepository<>), typeof(CommandsRepository<>))

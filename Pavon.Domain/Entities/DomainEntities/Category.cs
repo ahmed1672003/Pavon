@@ -8,17 +8,17 @@ public sealed class Category : BaseEntity, ITrackableCreate, ITrackableUpdate, I
     [Required]
     [Length(2, 256)]
     public string Name { get; set; }
-    public DateTime CreatedAt { get; set; }
-    public DateTime? UpdatedAt { get; set; }
-    public DateTime? DeletedAt { get; set; }
+    public DateTime CreatedAtUtc { get; set; }
+    public DateTime? UpdatedAtUtc { get; set; }
+    public DateTime? DeletedAtUtc { get; set; }
     public bool IsDeleted { get; set; }
 
     public Category(string name, DateTime createdAt, DateTime? updatedAt, DateTime? deletedAt, bool isDeleted)
     {
         Name = name;
-        CreatedAt = createdAt;
-        UpdatedAt = updatedAt;
-        DeletedAt = deletedAt;
+        CreatedAtUtc = createdAt;
+        UpdatedAtUtc = updatedAt;
+        DeletedAtUtc = deletedAt;
         IsDeleted = isDeleted;
     }
     public Category()

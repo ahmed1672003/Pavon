@@ -4,5 +4,6 @@ namespace Pavon.Domain.Abstractions.Common;
 public interface ITrackableCreate
 {
     [Required]
-    public DateTime CreatedAt { get; set; }
+    public DateTime CreatedAtUtc { get; set; }
+    Task CreateAsync() => Task.Run(() => CreatedAtUtc = DateTime.UtcNow);
 }

@@ -7,6 +7,7 @@ global using Microsoft.EntityFrameworkCore.Infrastructure;
 global using Microsoft.EntityFrameworkCore.Query;
 global using Microsoft.Extensions.DependencyInjection;
 
+global using Pavon.Domain.Abstractions.Common;
 global using Pavon.Domain.Abstractions.Repositories.Commands;
 global using Pavon.Domain.Abstractions.Repositories.Queries;
 global using Pavon.Domain.Abstractions.UnitOfWorks.Commands;

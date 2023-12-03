@@ -1,5 +1,4 @@
-﻿
-namespace Pavon.Persistence.UnitOfWorks.Commands;
+﻿namespace Pavon.Persistence.UnitOfWorks.Commands;
 public class UnitOfCommandsWork : IUnitOfCommandsWork
 {
     public UnitOfCommandsWork(ICategoryCommandsRepository categories) => Categories = categories;
