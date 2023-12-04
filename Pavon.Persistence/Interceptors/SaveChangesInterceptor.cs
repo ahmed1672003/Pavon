@@ -41,7 +41,6 @@ public sealed class SaveChangesInterceptor : Microsoft.EntityFrameworkCore.Diagn
                 continue;
             await entity.UpdateAsync();
         }
-
         return result;
     }
 }
